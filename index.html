@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: azure;
+        }
+        .calculator{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0;
+            width: 400px;
+            height: fit-content;
+            border: solid black;
+            background-color: rgb(77, 87, 221);
+            box-sizing: content-box;
+        }
+        input{
+            width: 80%;
+            margin: 30px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bolder;
+            font-size: x-large;
+        }
+        select{
+            width: 80%;
+            margin: 30px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bolder;
+            font-size: x-large;
+        }
+        button{
+            width: 80%;
+            margin: 30px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight:bolder;
+            font-size: x-large;
+        }
+        .results{
+            border: solid black;
+            width: fit-content;
+            position: relative;
+            text-align: center;
+            display: block;
+            margin: 0 10px;
+        }
+        h1{
+            margin: 0 10px;
+        }
+        p{
+            margin: 5px;
+            font-size: x-large;
+            font-weight: bolder;
+        }
+        .container{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            width: 900px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <div class="calculator">
+        <input type="number" id="first">
+        <input type="number" id="second">
+        <select name="operator" id="operator">
+            <option value="+" id="+">+</option>
+            <option value="-" id="-">-</option>
+            <option value="*" id="*">*</option>
+            <option value="/" id="/">/</option>
+        </select>
+        <button id="equals" onclick="calculate()">=</button>
+        <input type="text" id="resultInput" readonly>
+    </div>
+        
+    <div class="results">
+        <h1>Results:</h1>
+        <div id="list">
+            <h1>Results</h1>
+        </div>
+    </div></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
